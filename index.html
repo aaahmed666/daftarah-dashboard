@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Job Dashboard</title>
+    <!-- FontAwesome CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./css/styles.css"
+    />
+    <script
+      defer
+      src="scripts.js"
+    ></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container-fluid">
+        <div class="navbar-brand">
+          <a href="#"> i<mark>Z</mark>AM </a>
+        </div>
+        <div class="search">
+          <input
+            type="text"
+            class="input-search"
+            placeholder="
+            search by name job title, ..."
+          />
+          <div class="box-search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        <div class="head-sid-iconsetting head-sid-icon-setting-sm">
+          <div id="menu-toggle">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <div
+            class="navbar-toggler"
+            id="navbar-toggler"
+          >
+            &#9776;
+          </div>
+        </div>
+        <div>
+          <ul
+            class="navbar-menu"
+            id="navbar-menu"
+          >
+            <li class="">
+              <a
+                class="nav-items"
+                href="#home"
+              >
+                <i class="fa-solid fa-house"></i>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#jobs">
+                <div class="nav-items">
+                  <i class="fa-solid fa-briefcase"></i>
+                  Jobs
+                </div>
+              </a>
+            </li>
+            <li>
+              <a
+                class="nav-items"
+                href="#employers"
+              >
+                <i class="fa-solid fa-users"></i>
+                Employers
+              </a>
+            </li>
+            <li class="border-left">
+              <a
+                class="nav-items"
+                href="#notifications"
+              >
+                <i class="fa-regular fa-bell"></i>
+                Notifications
+              </a>
+            </li>
+            <li>
+              <a
+                class="nav-items per-notifications-length"
+                href="#messaging"
+              >
+                <i class="fa-regular fa-message"></i>
+                Messaging
+                <span
+                  class="notifications-length position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                >
+                  9
+                </span>
+              </a>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdownLink"
+                role="button"
+              >
+                <div class="nav-Profiles">
+                  <img
+                    src="image/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.avif"
+                    alt=""
+                  />
+                </div>
+                <span> Profile <i class="fa-solid fa-caret-down"></i> </span>
+              </a>
+              <span
+                class="dropdown-menu"
+                id="dropdownMenu"
+              >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  >Action</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  >Another action</a
+                >
+                <a
+                  class="dropdown-item"
+                  href="#"
+                  >Something else here</a
+                >
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ------------------------------------------- -->
+
+    <div class="container">
+      <!-- ------------- accordion start ---------------- -->
+      <aside class="sidebar">
+        <div class="head-sid-icon-setting">
+          <a href="#">
+            <i class="fa-solid fa-gear"></i>
+          </a>
+        </div>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">Dashboard</button>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Jobs Applications
+              <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-item">
+                <p>This is the content for section 1.</p>
+              </div>
+              <div class="accordion-content-item">
+                <p>This is the content for section 2.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Companies
+              <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-item">
+                <p>TanQeeb</p>
+              </div>
+              <div class="accordion-content-item">
+                <p>Daftra</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              settings
+              <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <div class="accordion-content">
+              <div class="accordion-content-item">
+                <p>This is the content for section 1.</p>
+              </div>
+              <div class="accordion-content-item">
+                <p>This is the content for section 1.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">logout</button>
+          </div>
+        </div>
+      </aside>
+      <!-- ------------- accordion end ---------------- -->
+
+      <main class="content">
+        <!-- Job Section Header -->
+        <div class="content-header">
+          <div class="sort-by">
+            <span>Sorting by :</span>
+            <select id="customSelect">
+              <option>Top match</option>
+              <option>Newest</option>
+              <option>Salary</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Job Listings -->
+        <div class="job-listings">
+          <div class="alert-form-switch">
+            <div>
+              <h3>UI Designer in Egypt</h3>
+              <span>70 jop positions </span>
+            </div>
+            <div>
+              <div class="form-check form-switch">
+                <label
+                  class="form-check-label"
+                  for="flexSwitchCheckDefault"
+                >
+                  Set alert</label
+                >
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="card"
+            style="max-width: 47rem"
+          >
+            <div class="card-head">
+              <div class="card-head-first">
+                <div class="contain-img">
+                  <img
+                    src="image/MhnwJbxw_400x400.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="card-head-text">
+                  <h3>Gaming UI Designer</h3>
+                  <span>Rockstar Games</span>
+                </div>
+              </div>
+              <div class="card-icon-heart">
+                <a href="#">
+                  <i class="fa-solid fa-heart"></i>
+                </a>
+              </div>
+            </div>
+            <div class="card-body">
+              <div>
+                <div>
+                  <small>
+                    <i class="fa-solid fa-map-pin"></i>
+                    <span>ElMansoura, Egypt</span>
+                  </small>
+                  <small>
+                    <i class="fa-regular fa-calendar"></i>
+                    <span> 10 days ago</span>
+                  </small>
+                </div>
+                <div class="card-lab-jop">
+                  <span> 0 - 3y of exp </span>
+                  <span> full time </span>
+                  <span> Remote </span>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              Creative / Design - it / Software development - Gaming
+            </div>
+          </div>
+
+          <div class="job-card">
+            <h3>Gaming UI Designer</h3>
+            <p>Rockstar Games</p>
+            <p>ElMansoura, Egypt • 10 days ago • 100 applications</p>
+            <p>Full time • Remote • 0 - 3 years of experience</p>
+            <p>Salary: 20K - 25K EGP</p>
+          </div>
+          <div class="job-card">
+            <h3>Senior UX UI Designer</h3>
+            <p>Egabi</p>
+            <p>Cairo, Egypt • 10 days ago</p>
+            <p>Full time • Hybrid • 0 - 3 years of experience</p>
+            <p>Salary: 20K - 25K EGP</p>
+          </div>
+          <div class="pagination">
+            <span class="page-number">1</span>
+            <span class="page-number active">2</span>
+            <span class="page-number">3</span>
+          </div>
+        </div>
+
+        <!-- Job Details and Apply Section -->
+        <div class="job-details">
+          <h3>Gaming UI Designer</h3>
+          <p>Rockstar Games</p>
+          <p>ElMansoura, Egypt</p>
+          <p>Full time • Remote</p>
+          <p>0 - 3 years of experience</p>
+          <p>Bachelor's degree required</p>
+          <p>Mid - Senior level</p>
+          <p>Salary: 20K - 25K EGP</p>
+          <button class="apply-btn">Apply for job</button>
+        </div>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="sidebar-end">
+        <div class="head-sid-icon-setting">
+          <div class="head-sidebar-end">
+            <div class="contain-img">
+              <img
+                style="width: 100%; object-fit: contain"
+                src="image/MhnwJbxw_400x400.jpg"
+                alt=""
+              />
+            </div>
+            <span>Rockstar Games</span>
+          </div>
+          <div>
+            <a href="#">
+              <i class="fa-solid fa-arrow-right-long"></i>
+            </a>
+            <a href="#">
+              <i class="fa-solid fa-ellipsis"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="card-head-text">
+          <h3>Gaming UI Designer</h3>
+
+          <div>
+            <small>
+              <i class="fa-solid fa-map-pin"></i>
+              <span>ElMansoura, Egypt</span>
+            </small>
+            <small>
+              <i class="fa-regular fa-calendar"></i>
+              <span> 10 days ago</span>
+            </small>
+            <small>
+              <i class="fa-solid fa-file-lines"></i>
+              <span> 100 applications</span>
+            </small>
+          </div>
+
+          <div class="card-lab-jop">
+            <span> full time </span>
+            <span> Remote </span>
+          </div>
+          <p>✅ 5 of 6 skills match with you - you may be a goodfit 💡</p>
+
+          <div class="contain-applay-save">
+            <button class="apply-btn-sid">Apply for job</button>
+            <div class="card-icon-heart">
+              <a href="#">
+                <i class="fa-solid fa-heart"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+        <div class="side-end">
+          <h3>Job Details</h3>
+          <div>
+            <h4>years of Experience : <span>0 - 3 years</span></h4>
+            <h4>Education level : <span>Bachelors degree</span></h4>
+            <h4>Career level : <span>Mid - Senior</span></h4>
+            <h4>Salary : <span>20K - 25K EGY</span></h4>
+            <h4>
+              Category :
+              <span
+                >Creative / Design - it / Software development - Gaming</span
+              >
+            </h4>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
